@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
      'jevina-verghese-portfolio.onrender.com',
-     'www.jevina-verghese-portfolio.onrender.com'
+     'www.jevina-verghese-portfolio.onrender.com',
+     '127.0.0.1',
+     'localhost'
 ]
 
 
@@ -119,16 +121,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
+# STATIC_URL = '/staticfiles/'
 MEDIA = '/images/'
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'staticfiles')
-# ]
+STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',   # where you keep your *source* static files for development
+]
 
-# Target folder for collectstatic (used in production only)
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles'   # where collectstatic will dump files for production
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

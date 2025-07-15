@@ -122,9 +122,9 @@ USE_TZ = True
 STATIC_URL = '/staticfiles/'
 MEDIA = '/images/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'staticfiles')
+# ]
 
 
 # Target folder for collectstatic (used in production only)
